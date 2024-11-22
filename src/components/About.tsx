@@ -14,7 +14,7 @@ export default function About() {
           <div className="flex items-center justify-center space-x-4 mb-6">
             <div className={`h-1 w-12 ${tailwindColors.primary}`}></div>
             <h2 className={`text-4xl font-extrabold tracking-tight ${tailwindColors.primaryText} sm:text-5xl`}>
-              About Us
+              Our Commitment to Excellence
             </h2>
             <div className={`h-1 w-12 ${tailwindColors.primary}`}></div>
           </div>
