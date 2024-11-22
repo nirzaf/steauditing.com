@@ -27,7 +27,7 @@ export default function About() {
             <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="flex items-start space-x-4">
                 <img
-                  src="https://ik.imagekit.io/ri5cvrkrr/neve-accounting-14.jpg?updatedAt=1732207352673"
+                  src="https://ik.imagekit.io/ri5cvrkrr/neve-accounting-22.png?updatedAt=1732207355523"
                   alt="Financial analysis"
                   className="w-24 h-24 rounded-lg object-cover shadow-md"
                 />
@@ -97,7 +97,7 @@ export default function About() {
             </div>
             <div className="relative group">
               <img
-                src="https://ik.imagekit.io/ri5cvrkrr/neve-accounting-20.jpg?updatedAt=1732207353692"
+                src="https://ik.imagekit.io/ri5cvrkrr/acc1.jpg?updatedAt=1732207356333"
                 alt="Office workspace"
                 className="w-full h-48 object-cover rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500"
               />
