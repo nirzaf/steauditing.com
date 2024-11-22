@@ -1,4 +1,4 @@
-import { Award, Clock, Target, Briefcase, Calendar, Star, Heart, DollarSign, Clock4, CheckCircle2, Shield, Crosshair, Users, Eye, Lightbulb } from 'lucide-react';
+import { Award, Clock, Target, Briefcase, Calendar, Star, Heart, DollarSign, Clock4, CheckCircle2, Shield, Crosshair, Users, Eye, Lightbulb, Lock } from 'lucide-react';
 
 const features = [
   { name: 'Business Growth', icon: Target },
@@ -21,7 +21,8 @@ const values = [
   { name: 'Objectivity', icon: Crosshair, description: 'We perform duties in an unbiased manner, i.e., based on an informed analysis of the issues and a clear understanding of the operations affected.' },
   { name: 'Quality', icon: Star, description: 'We provide accurate reports and timely, feasible, and relevant recommendations.' },
   { name: 'Community', icon: Users, description: 'We collaborate with colleagues and clients to provide services that improve our stakeholders effectiveness and efficiency.' },
-  { name: 'Visionary', icon: Eye, description: 'We develop creative and innovative approaches to key issues facing by our clients.' }
+  { name: 'Visionary', icon: Eye, description: 'We develop creative and innovative approaches to key issues facing by our clients.' },
+  { name: 'Trust & Confidentiality', icon: Lock, description: 'We maintain the highest standards of confidentiality and build lasting relationships based on trust, integrity, and professional ethics.' }
 ];
 
 export default function AboutPage() {
@@ -76,9 +77,20 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-12 text-center">Why Choose Us?</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {features.map((feature) => (
-              <div key={feature.name} className="flex items-center space-x-4 p-4 rounded-lg bg-gray-50">
-                <feature.icon className="h-8 w-8 text-blue-600" />
-                <span className="font-medium">{feature.name}</span>
+              <div 
+                key={feature.name} 
+                className="group flex flex-col items-center p-6 rounded-xl bg-gradient-to-br from-white to-gray-50 
+                          shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1
+                          border border-gray-100 hover:border-blue-200"
+              >
+                <div className="relative">
+                  <div className="absolute inset-0 bg-blue-500 rounded-full opacity-0 group-hover:opacity-10 
+                                transform scale-0 group-hover:scale-150 transition-all duration-300"></div>
+                  <feature.icon className="h-12 w-12 text-blue-600 group-hover:text-blue-700 
+                                        transform group-hover:rotate-6 transition-all duration-300" />
+                </div>
+                <span className="font-medium mt-4 text-lg text-gray-800 group-hover:text-blue-600 
+                                transition-colors duration-300">{feature.name}</span>
               </div>
             ))}
           </div>
@@ -131,10 +143,17 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-12 text-center">Our Core Values</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value) => (
-              <div key={value.name} className="bg-white p-6 rounded-lg shadow-md">
-                <value.icon className="h-10 w-10 text-blue-600 mb-4" />
-                <h3 className="text-xl font-semibold mb-3">{value.name}</h3>
-                <p className="text-gray-600">{value.description}</p>
+              <div 
+                key={value.name} 
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-20 h-20 rounded-full bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors duration-300">
+                    <value.icon className="h-12 w-12 text-blue-600 transform group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-800">{value.name}</h3>
+                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                </div>
               </div>
             ))}
           </div>

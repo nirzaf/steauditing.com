@@ -1,8 +1,21 @@
 import React from 'react';
-import { HiOutlineClipboardCheck, HiOutlineCalculator, HiOutlineLightBulb, HiOutlineDocumentText, 
-         HiOutlineCash, HiOutlineUserGroup, HiOutlineChartBar, HiOutlineDocumentDuplicate,
-         HiOutlineScale, HiOutlineSearchCircle, HiOutlineBookOpen, HiOutlineCog, 
-         HiOutlineLightningBolt, HiOutlineDesktopComputer, HiOutlineShieldCheck } from 'react-icons/hi';
+import { 
+  HiOutlinePresentationChartBar, // External Audit
+  HiOutlineCloud, // Real Time Accounting
+  HiOutlineLightBulb, // Consulting
+  HiOutlineDocumentReport, // Financial Statements
+  HiOutlineChartSquareBar, // Budgeting
+  HiOutlineUserGroup, // Payroll
+  HiOutlineCurrencyDollar, // Investment
+  HiOutlineDocumentDuplicate, // Tax
+  HiOutlineScale, // Business Valuation
+  HiOutlineSearchCircle, // Feasibility
+  HiOutlineBookOpen, // Book Keeping
+  HiOutlineCash, // Financial Management
+  HiOutlineSparkles, // Start-Up
+  HiOutlineCube, // ERP
+  HiOutlineShieldCheck // Risk Assessment
+} from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
 const tailwindColors = {
@@ -15,12 +28,12 @@ const services = [
   {
     title: 'External Audit',
     description: 'Professional and independent examination of financial statements and accounting records.',
-    icon: HiOutlineClipboardCheck,
+    icon: HiOutlinePresentationChartBar,
   },
   {
     title: 'Real Time Accounting Software',
     description: 'Modern cloud-based accounting solutions for real-time financial tracking and management.',
-    icon: HiOutlineDesktopComputer,
+    icon: HiOutlineCloud,
   },
   {
     title: 'Consulting',
@@ -30,12 +43,12 @@ const services = [
   {
     title: 'Financial Statements',
     description: 'Comprehensive preparation and analysis of financial statements and reports.',
-    icon: HiOutlineDocumentText,
+    icon: HiOutlineDocumentReport,
   },
   {
     title: 'Budgeting',
     description: 'Strategic budget planning and management to optimize your financial resources.',
-    icon: HiOutlineCalculator,
+    icon: HiOutlineChartSquareBar,
   },
   {
     title: 'Payroll Services',
@@ -45,7 +58,7 @@ const services = [
   {
     title: 'Investment Strategies',
     description: 'Expert guidance on investment opportunities and portfolio management.',
-    icon: HiOutlineChartBar,
+    icon: HiOutlineCurrencyDollar,
   },
   {
     title: 'Tax Return & Fillings',
@@ -75,12 +88,12 @@ const services = [
   {
     title: 'Start-Up Assistance',
     description: 'Comprehensive support for new business ventures and startups.',
-    icon: HiOutlineLightningBolt,
+    icon: HiOutlineSparkles,
   },
   {
     title: 'ERP Consultancy & Implementation',
     description: 'Expert guidance in selecting and implementing ERP solutions.',
-    icon: HiOutlineCog,
+    icon: HiOutlineCube,
   },
   {
     title: 'Risk Assessment & Internal Controls',
@@ -119,8 +132,8 @@ const ServicesPage: React.FC = () => {
               <div className="h-full flex flex-col bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
                 <div className="flex-1 p-6 flex flex-col justify-between">
                   <div className="flex-1">
-                    <div className={`w-12 h-12 ${tailwindColors.secondary} rounded-xl flex items-center justify-center mb-4`}>
-                      <service.icon className={`w-6 h-6 ${tailwindColors.primaryText}`} />
+                    <div className={`w-16 h-16 ${tailwindColors.secondary} rounded-xl flex items-center justify-center mb-4`}>
+                      <service.icon className={`w-10 h-10 ${tailwindColors.primaryText}`} />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">
                       {service.title}
