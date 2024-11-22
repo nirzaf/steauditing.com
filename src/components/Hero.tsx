@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { tailwindColors } from '../theme';
 import { ChevronRight } from 'lucide-react';
 
 export default function Hero() {
