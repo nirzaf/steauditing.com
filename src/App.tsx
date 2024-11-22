@@ -9,6 +9,8 @@ import AboutPage from './pages/AboutPage';
 import PartnersPage from './pages/PartnersPage';
 import ContactPage from './pages/ContactPage';
 import ServicesPage from './pages/ServicesPage';
+import MissionVision from './components/MissionVision';
+import Performance from './components/Performance';
 import { tailwindColors } from './theme';
 
 function HomePage() {
@@ -16,7 +18,9 @@ function HomePage() {
     <div className={tailwindColors.background}>
       <Hero />
       <WhyChooseUs />
+      <Performance />
       <Services />
+      <MissionVision />
       <About />
     </div>
   );

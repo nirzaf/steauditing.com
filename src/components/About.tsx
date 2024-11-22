@@ -102,18 +102,6 @@ export default function About() {
                 className="w-full h-48 object-cover rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500"
               />
             </div>
-
-            {/* Feature Cards */}
-            <div className={`${tailwindColors.primary} bg-opacity-10 rounded-lg p-4 hover:bg-opacity-20 transition-all duration-300`}>
-              <div className="text-2xl mb-2">🎯</div>
-              <h3 className={`text-lg font-semibold ${tailwindColors.primaryText} mb-2`}>Our Mission</h3>
-              <p className="text-sm text-gray-600">Delivering excellence in auditing and consultancy services</p>
-            </div>
-            <div className={`${tailwindColors.primary} bg-opacity-10 rounded-lg p-4 hover:bg-opacity-20 transition-all duration-300`}>
-              <div className="text-2xl mb-2">⭐</div>
-              <h3 className={`text-lg font-semibold ${tailwindColors.primaryText} mb-2`}>Our Vision</h3>
-              <p className="text-sm text-gray-600">Shaping the future of financial services in Qatar</p>
-            </div>
           </div>
         </div>
       </div>
