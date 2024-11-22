@@ -7,6 +7,7 @@ import About from './components/About';
 import AboutPage from './pages/AboutPage';
 import PartnersPage from './pages/PartnersPage';
 import ContactPage from './pages/ContactPage';
+import ServicesPage from './pages/ServicesPage';
 import { tailwindColors } from './theme';
 
 function HomePage() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/partners" element={<PartnersPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/services" element={<ServicesPage />} />
         </Routes>
       </div>
     </Router>

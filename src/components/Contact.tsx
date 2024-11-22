@@ -1,5 +1,6 @@
-import { tailwindColors } from '../theme';
+import React from 'react';
 import { HiPhone, HiMail, HiLocationMarker, HiExternalLink } from 'react-icons/hi';
+import { tailwindColors } from '../theme';
 
 export default function Contact() {
   return (
