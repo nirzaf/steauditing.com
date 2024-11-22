@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
@@ -84,8 +85,8 @@ export default function Hero() {
                   className="mt-8 sm:mt-10 flex justify-center gap-4"
                 >
                   {/* Contact Button */}
-                  <a
-                    href="#contact"
+                  <Link
+                    to="/contact"
                     className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl text-white font-medium overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
                   >
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-600 to-blue-500 transition-all duration-300 group-hover:opacity-90"></div>
@@ -93,7 +94,7 @@ export default function Hero() {
                       Contact Us
                       <ChevronRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                     </div>
-                  </a>
+                  </Link>
 
                   {/* Services Button */}
                   <a
