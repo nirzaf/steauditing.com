@@ -7,23 +7,24 @@ import About from './components/About';
 import Contact from './components/Contact';
 import AboutPage from './pages/AboutPage';
 import PartnersPage from './pages/PartnersPage';
+import { tailwindColors } from './theme';
 
 function HomePage() {
   return (
-    <>
+    <div className={tailwindColors.background}>
       <Hero />
       <WhyChooseUs />
       <Services />
       <About />
       <Contact />
-    </>
+    </div>
   );
 }
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white">
+      <div className={`min-h-screen ${tailwindColors.background}`}>
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
