@@ -12,7 +12,7 @@ export default function Contact() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 pt-4">
           <div className={`h-1 w-32 mx-auto ${tailwindColors.primary}`}></div>
         </div>
 
