@@ -11,6 +11,7 @@ import ContactPage from './pages/ContactPage';
 import ServicesPage from './pages/ServicesPage';
 import MissionVision from './components/MissionVision';
 import Performance from './components/Performance';
+import PrimeGlobal from './components/PrimeGlobal';
 import { tailwindColors } from './theme';
 
 function HomePage() {
@@ -18,6 +19,7 @@ function HomePage() {
     <div className={tailwindColors.background}>
       <Hero />
       <WhyChooseUs />
+      <PrimeGlobal />
       <Performance />
       <Services />
       <MissionVision />
