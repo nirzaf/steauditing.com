@@ -3,7 +3,7 @@ import { Target, Eye, ArrowRight } from 'lucide-react';
 
 export default function MissionVision() {
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
+    <section className="pt-8 pb-24 relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
       {/* Background Decoration */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute transform rotate-12 -right-40 -top-40 w-96 h-96 rounded-full bg-blue-50"></div>
