@@ -38,6 +38,27 @@ export default function Services() {
           </p>
         </div>
 
+        {/* Value Proposition */}
+        <div className="mt-12 mb-20">
+          <div className="bg-gradient-to-r from-blue-50 to-gray-50 rounded-2xl p-8 shadow-lg">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Adding Value to Your Organization</h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  We aim to add value to your organisation by offering practical suggestions to improve your systems and manage financial risks.
+                </p>
+              </div>
+              <div className="flex-1 flex justify-center">
+                <div className="w-32 h-32 bg-blue-600 bg-opacity-10 rounded-full flex items-center justify-center">
+                  <svg className="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <div
