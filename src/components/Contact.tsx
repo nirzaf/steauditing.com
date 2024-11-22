@@ -118,7 +118,7 @@ export default function Contact() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Business Hours</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Monday - Friday</span>
+                    <span className="text-gray-600">Sunday - Thursday</span>
                     <span className="text-gray-900 font-medium">8:00 AM - 6:00 PM</span>
                   </div>
                   <div className="flex justify-between items-center">
@@ -126,7 +126,7 @@ export default function Contact() {
                     <span className="text-gray-900 font-medium">9:00 AM - 3:00 PM</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Sunday</span>
+                    <span className="text-gray-600">Friday</span>
                     <span className="text-gray-900 font-medium">Closed</span>
                   </div>
                 </div>
