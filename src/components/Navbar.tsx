@@ -24,7 +24,7 @@ export default function Navbar() {
             <Link to="/about" className="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">About Us</Link>
             <Link to="/partners" className="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Our Partners</Link>
             <a href="#services" className="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Services</a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Contact</a>
+            <Link to="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Contact</Link>
           </div>
 
           <div className="md:hidden flex items-center">
@@ -46,7 +46,7 @@ export default function Navbar() {
             <Link to="/about" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">About Us</Link>
             <Link to="/partners" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Our Partners</Link>
             <a href="#services" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Services</a>
-            <a href="#contact" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Contact</a>
+            <Link to="/contact" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Contact</Link>
           </div>
         </div>
       )}

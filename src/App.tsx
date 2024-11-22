@@ -4,9 +4,9 @@ import Hero from './components/Hero';
 import WhyChooseUs from './components/WhyChooseUs';
 import Services from './components/Services';
 import About from './components/About';
-import Contact from './components/Contact';
 import AboutPage from './pages/AboutPage';
 import PartnersPage from './pages/PartnersPage';
+import ContactPage from './pages/ContactPage';
 import { tailwindColors } from './theme';
 
 function HomePage() {
@@ -16,7 +16,6 @@ function HomePage() {
       <WhyChooseUs />
       <Services />
       <About />
-      <Contact />
     </div>
   );
 }
@@ -30,6 +29,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/partners" element={<PartnersPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
     </Router>

@@ -1,5 +1,5 @@
 import { tailwindColors } from '../theme';
-import { FiPhone, FiMail, FiMapPin, FiExternalLink } from 'react-icons/fi';
+import { HiPhone, HiMail, HiLocationMarker, HiExternalLink } from 'react-icons/hi';
 
 export default function Contact() {
   return (
@@ -13,14 +13,7 @@ export default function Contact() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center space-x-4">
-            <div className={`h-1 w-12 ${tailwindColors.primary}`}></div>
-            <h2 className={`text-4xl font-extrabold ${tailwindColors.primaryText} sm:text-5xl`}>
-              Contact Us
-            </h2>
-            <div className={`h-1 w-12 ${tailwindColors.primary}`}></div>
-          </div>
-          <p className="mt-4 text-xl text-gray-600">Get in touch with our expert team</p>
+          <div className={`h-1 w-32 mx-auto ${tailwindColors.primary}`}></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -30,7 +23,7 @@ export default function Contact() {
             <div className="bg-white rounded-xl shadow-xl p-8 transform hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-start space-x-4">
                 <div className={`p-3 ${tailwindColors.primary} bg-opacity-10 rounded-lg`}>
-                  <FiPhone className={`w-6 h-6 ${tailwindColors.primaryText}`} />
+                  <HiPhone className={`w-6 h-6 ${tailwindColors.primaryText}`} />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-1">Phone</h3>
@@ -47,7 +40,7 @@ export default function Contact() {
             <div className="bg-white rounded-xl shadow-xl p-8 transform hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-start space-x-4">
                 <div className={`p-3 ${tailwindColors.primary} bg-opacity-10 rounded-lg`}>
-                  <FiMail className={`w-6 h-6 ${tailwindColors.primaryText}`} />
+                  <HiMail className={`w-6 h-6 ${tailwindColors.primaryText}`} />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-1">Email</h3>
@@ -64,7 +57,7 @@ export default function Contact() {
             <div className="bg-white rounded-xl shadow-xl p-8 transform hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-start space-x-4">
                 <div className={`p-3 ${tailwindColors.primary} bg-opacity-10 rounded-lg`}>
-                  <FiMapPin className={`w-6 h-6 ${tailwindColors.primaryText}`} />
+                  <HiLocationMarker className={`w-6 h-6 ${tailwindColors.primaryText}`} />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-1">Address</h3>
@@ -79,7 +72,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className={`inline-flex items-center mt-2 text-sm ${tailwindColors.primaryText} hover:underline`}
                   >
-                    View on Google Maps <FiExternalLink className="ml-1" />
+                    View on Google Maps <HiExternalLink className="ml-1" />
                   </a>
                 </div>
               </div>
