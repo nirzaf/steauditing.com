@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, BarChart2, Clock, FileText, PieChart, Users } from 'lucide-react';
+import { BarChart2, Clock, FileText, PieChart, Users } from 'lucide-react';
 
 const services = [
   {
