@@ -12,11 +12,10 @@ import ServicesPage from './pages/ServicesPage';
 import MissionVision from './components/MissionVision';
 import Performance from './components/Performance';
 import PrimeGlobal from './components/PrimeGlobal';
-import { tailwindColors } from './theme';
 
 function HomePage() {
   return (
-    <div className={tailwindColors.background}>
+    <div className="bg-site-bg">
       <Hero />
       <WhyChooseUs />
       <PrimeGlobal />
@@ -31,7 +30,7 @@ function HomePage() {
 function App() {
   return (
     <Router>
-      <div className={`min-h-screen ${tailwindColors.background}`}>
+      <div className="min-h-screen bg-site-bg">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
