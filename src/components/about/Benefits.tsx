@@ -4,22 +4,22 @@ import { motion } from 'framer-motion';
 const benefits = [
   { 
     name: 'We Do Things With Love And Passion',
-    description: 'Every project is handled with utmost care and dedication to ensure exceptional quality.',
+    description: 'Every project is handled with utmost care and dedication to ensure exceptional quality and outstanding results.',
     icon: Heart 
   },
   { 
     name: 'Affordable Price Range',
-    description: 'Competitive pricing without compromising on the quality of our services.',
+    description: 'Competitive pricing without compromising on the quality of our services, delivering maximum value for your investment.',
     icon: DollarSign 
   },
   { 
     name: 'Receive on Time',
-    description: 'We value your time and ensure timely delivery of all our commitments.',
+    description: 'We value your time and ensure timely delivery of all our commitments, maintaining strict adherence to project schedules.',
     icon: Clock4 
   },
   { 
     name: 'Satisfaction Guaranteed',
-    description: 'Your satisfaction is our priority, backed by our commitment to excellence.',
+    description: 'Your satisfaction is our priority, backed by our commitment to excellence and continuous support throughout the process.',
     icon: CheckCircle2 
   }
 ];
@@ -65,13 +65,13 @@ export default function Benefits() {
             <motion.div 
               key={benefit.name}
               variants={itemVariants}
-              className="group"
+              className="group h-full"
             >
-              <div className="relative p-8 rounded-3xl bg-white/80 backdrop-blur-xl border border-gray-100/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-shadow duration-500">
+              <div className="relative p-8 rounded-3xl bg-white/80 backdrop-blur-xl border border-gray-100/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-shadow duration-500 h-full flex flex-col">
                 <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
                 <div className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
                 
-                <div className="relative">
+                <div className="relative flex flex-col flex-1">
                   {/* Icon container with gradient background */}
                   <div className="mb-6 relative">
                     <div className="absolute inset-0 bg-blue-500/10 blur-2xl rounded-full transform -translate-y-1/2"></div>
@@ -81,12 +81,14 @@ export default function Benefits() {
                   </div>
 
                   {/* Text content */}
-                  <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">
-                    {benefit.name}
-                  </h3>
-                  <p className="text-gray-600 text-center text-sm leading-relaxed">
-                    {benefit.description}
-                  </p>
+                  <div className="flex flex-col flex-1 justify-between">
+                    <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">
+                      {benefit.name}
+                    </h3>
+                    <p className="text-gray-600 text-center text-sm leading-relaxed">
+                      {benefit.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
