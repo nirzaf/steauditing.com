@@ -1,24 +1,97 @@
 import { Heart, DollarSign, Clock4, CheckCircle2 } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const benefits = [
-  { name: 'We Do Things With Love And Passion', icon: Heart },
-  { name: 'Affordable Price Range', icon: DollarSign },
-  { name: 'Receive on Time', icon: Clock4 },
-  { name: 'Satisfaction Guaranteed', icon: CheckCircle2 }
+  { 
+    name: 'We Do Things With Love And Passion',
+    description: 'Every project is handled with utmost care and dedication to ensure exceptional quality.',
+    icon: Heart 
+  },
+  { 
+    name: 'Affordable Price Range',
+    description: 'Competitive pricing without compromising on the quality of our services.',
+    icon: DollarSign 
+  },
+  { 
+    name: 'Receive on Time',
+    description: 'We value your time and ensure timely delivery of all our commitments.',
+    icon: Clock4 
+  },
+  { 
+    name: 'Satisfaction Guaranteed',
+    description: 'Your satisfaction is our priority, backed by our commitment to excellence.',
+    icon: CheckCircle2 
+  }
 ];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1]
+    }
+  }
+};
 
 export default function Benefits() {
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8">
-          {benefits.map((benefit) => (
-            <div key={benefit.name} className="text-center">
-              <benefit.icon className="h-12 w-12 mx-auto text-blue-600 mb-4" />
-              <h3 className="font-medium">{benefit.name}</h3>
-            </div>
+    <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_40%)] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_40%)] pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <motion.div 
+          className="grid md:grid-cols-4 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {benefits.map((benefit, index) => (
+            <motion.div 
+              key={benefit.name}
+              variants={itemVariants}
+              className="group"
+            >
+              <div className="relative p-8 rounded-3xl bg-white/80 backdrop-blur-xl border border-gray-100/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-shadow duration-500">
+                <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
+                <div className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
+                
+                <div className="relative">
+                  {/* Icon container with gradient background */}
+                  <div className="mb-6 relative">
+                    <div className="absolute inset-0 bg-blue-500/10 blur-2xl rounded-full transform -translate-y-1/2"></div>
+                    <div className="relative bg-gradient-to-br from-blue-500 to-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+                      <benefit.icon className="h-8 w-8 text-white" strokeWidth={1.5} />
+                    </div>
+                  </div>
+
+                  {/* Text content */}
+                  <h3 className="text-xl font-medium text-gray-900 mb-3 text-center">
+                    {benefit.name}
+                  </h3>
+                  <p className="text-gray-600 text-center text-sm leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
