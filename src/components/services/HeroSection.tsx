@@ -1,5 +1,5 @@
-import { Users } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Briefcase } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -16,7 +16,7 @@ export default function HeroSection() {
           className="flex flex-col items-center text-center"
         >
           <div className="bg-[#FFC635]/10 backdrop-blur-xl p-4 rounded-2xl mb-6 transform -rotate-6 hover:rotate-0 transition-transform duration-500">
-            <Users className="h-8 w-8 text-[#FFC635]" strokeWidth={1.5} />
+            <Briefcase className="h-8 w-8 text-[#FFC635]" strokeWidth={1.5} />
           </div>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -24,7 +24,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="text-2xl md:text-3xl font-medium tracking-tight text-[#FFC635]/90 max-w-3xl"
           >
-            Meet our experienced leadership team
+            Comprehensive auditing and consultancy services for your business
           </motion.p>
         </motion.div>
       </div>

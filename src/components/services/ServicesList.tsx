@@ -10,14 +10,9 @@ interface Service {
 
 interface ServicesListProps {
   services: Service[];
-  tailwindColors: {
-    primary: string;
-    primaryText: string;
-    secondary: string;
-  };
 }
 
-const ServicesList: React.FC<ServicesListProps> = ({ services, tailwindColors }) => {
+const ServicesList: React.FC<ServicesListProps> = ({ services }) => {
   return (
     <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {services.map((service, index) => (
@@ -25,7 +20,6 @@ const ServicesList: React.FC<ServicesListProps> = ({ services, tailwindColors })
           key={service.title}
           {...service}
           index={index}
-          tailwindColors={tailwindColors}
         />
       ))}
     </div>
