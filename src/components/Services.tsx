@@ -83,10 +83,6 @@ export default function Services() {
                 <p className="text-xl text-gray-600 leading-relaxed">
                   We aim to add value to your organisation by offering practical suggestions to improve your systems and manage financial risks.
                 </p>
-                <div className="flex items-center text-blue-600 hover:text-blue-700 transition-colors cursor-pointer group">
-                  <span className="font-semibold">Learn More</span>
-                  <ArrowRight className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-                </div>
               </div>
               <div className="flex-1 flex justify-center">
                 <div className="relative">
@@ -125,8 +121,8 @@ export default function Services() {
                     alt={service.title}
                   />
                   {/* Icon Overlay */}
-                  <div className="absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur rounded-xl flex items-center justify-center shadow-lg">
-                    <Icon className={`w-6 h-6 bg-gradient-to-r ${service.accentColor} bg-clip-text text-transparent`} />
+                  <div className="absolute top-4 right-4">
+                    <Icon className={`w-6 h-6 text-white`} />
                   </div>
                 </div>
 
