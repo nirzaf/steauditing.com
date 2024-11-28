@@ -42,11 +42,11 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Home</Link>
-            <Link to="/about" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">About Us</Link>
-            <Link to="/partners" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Our Partners</Link>
-            <Link to="/services" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Services</Link>
-            <Link to="/contact" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Contact</Link>
+            <Link to="/" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium" onClick={() => setIsOpen(false)}>Home</Link>
+            <Link to="/about" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium" onClick={() => setIsOpen(false)}>About Us</Link>
+            <Link to="/partners" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium" onClick={() => setIsOpen(false)}>Our Partners</Link>
+            <Link to="/services" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium" onClick={() => setIsOpen(false)}>Services</Link>
+            <Link to="/contact" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium" onClick={() => setIsOpen(false)}>Contact</Link>
           </div>
         </div>
       )}
