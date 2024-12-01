@@ -12,6 +12,7 @@ import ServicesPage from './pages/ServicesPage';
 import MissionVision from './components/MissionVision';
 import Performance from './components/Performance';
 import PrimeGlobal from './components/PrimeGlobal';
+import { Toaster } from 'react-hot-toast';
 
 function HomePage() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
         </Routes>
         <Footer />
+        <Toaster position="top-right" />
       </div>
     </Router>
   );
