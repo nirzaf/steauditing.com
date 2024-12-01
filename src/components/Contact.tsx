@@ -26,9 +26,15 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
+      const domain = window.location.hostname;
+      const subjectWithDomain = `${formData.subject} (${domain})`;
+
       const { error } = await supabase
         .from('quadrate_contact_submissions')
-        .insert([formData]);
+        .insert([{
+          ...formData,
+          subject: subjectWithDomain
+        }]);
 
       if (error) throw error;
 
