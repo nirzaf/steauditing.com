@@ -1,12 +1,6 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
-import { IconType } from 'react-icons';
-
-interface Service {
-  title: string;
-  description: string;
-  icon: IconType;
-}
+import { Service } from '../../types/service';
 
 interface ServicesListProps {
   services: Service[];

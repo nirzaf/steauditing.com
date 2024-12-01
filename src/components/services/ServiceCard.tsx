@@ -1,11 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { IconType } from 'react-icons';
+import { Service } from '../../types/service';
 
-interface ServiceCardProps {
-  title: string;
-  description: string;
-  icon: IconType;
+interface ServiceCardProps extends Service {
   index: number;
 }
 
