@@ -1,55 +1,116 @@
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { 
+  Menu, 
+  X, 
+  Home,
+  Info,
+  Users,
+  Briefcase,
+  PhoneCall
+} from 'lucide-react';
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+const Navbar: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { path: '/', label: 'Home', icon: Home },
+    { path: '/about', label: 'About Us', icon: Info },
+    { path: '/partners', label: 'Our Partners', icon: Users },
+    { path: '/services', label: 'Services', icon: Briefcase },
+    { path: '/contact', label: 'Contact', icon: PhoneCall }
+  ];
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
 
   return (
-    <nav className="bg-white shadow-lg fixed w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
-          <div className="flex-shrink-0 flex items-center">
-            <Link to="/">
+    <>
+      <nav 
+        className={`fixed w-full z-50 transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-white shadow-lg' 
+            : 'bg-white/90 backdrop-blur-sm shadow-lg'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20">
+            {/* Logo */}
+            <Link to="/" className="flex items-center">
               <img 
                 src="https://ik.imagekit.io/ri5cvrkrr/LOGO-.png?updatedAt=1732207359661" 
                 alt="STE Logo" 
                 className="h-12 w-auto"
               />
             </Link>
-          </div>
-          
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Home</Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">About Us</Link>
-            <Link to="/partners" className="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Our Partners</Link>
-            <Link to="/services" className="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Services</Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Contact</Link>
-          </div>
 
-          <div className="md:hidden flex items-center">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              {navLinks.map(({ path, label, icon: Icon }) => (
+                <Link
+                  key={path}
+                  to={path}
+                  className={`text-sm font-medium transition-all duration-300 px-3 py-2 flex items-center gap-2 ${
+                    isActive(path)
+                      ? 'text-[#00204A] border-b-2 border-[#00204A]'
+                      : 'text-gray-700 hover:text-[#00204A]'
+                  }`}
+                >
+                  <Icon size={16} className="flex-shrink-0" />
+                  {label}
+                </Link>
+              ))}
+            </div>
+
+            {/* Mobile Menu Button */}
             <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600"
+              className="md:hidden focus:outline-none text-gray-700 hover:text-[#00204A]"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
-        </div>
-      </div>
 
-      {/* Mobile menu */}
-      {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium" onClick={() => setIsOpen(false)}>Home</Link>
-            <Link to="/about" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium" onClick={() => setIsOpen(false)}>About Us</Link>
-            <Link to="/partners" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium" onClick={() => setIsOpen(false)}>Our Partners</Link>
-            <Link to="/services" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium" onClick={() => setIsOpen(false)}>Services</Link>
-            <Link to="/contact" className="block text-gray-700 hover:text-blue-600 px-3 py-2 font-medium" onClick={() => setIsOpen(false)}>Contact</Link>
-          </div>
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden bg-white shadow-lg rounded-b-2xl">
+              <div className="px-4 pt-2 pb-6 space-y-2">
+                {navLinks.map(({ path, label, icon: Icon }) => (
+                  <Link
+                    key={path}
+                    to={path}
+                    className={`flex items-center gap-3 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
+                      isActive(path)
+                        ? 'text-[#00204A] bg-gray-100 px-4'
+                        : 'text-gray-700 hover:text-[#00204A] hover:bg-gray-50 px-4'
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <Icon size={18} className="flex-shrink-0" />
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
-      )}
-    </nav>
+      </nav>
+
+      {/* Spacer to prevent content from hiding under fixed navbar */}
+      <div className="h-20"></div>
+    </>
   );
-}
+};
+
+export default Navbar;
