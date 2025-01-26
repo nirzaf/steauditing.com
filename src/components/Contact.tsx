@@ -184,19 +184,84 @@ export default function Contact() {
           {/* Right Column - Map, Business Hours, and Address */}
           <div className="lg:col-span-1">
             <div className="space-y-6">
-              {/* Map Card */}
-              <div className="bg-white rounded-xl shadow-lg p-4 transform hover:-translate-y-1 transition-all duration-300 border border-[#00204A]/10">
-                <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14432.914085278253!2d51.415211!3d25.262897!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45d9609642333b%3A0xe1b2139c78662585!2sSalem%20Taleb%20Efaifa%20Auditing%20and%20consultancy!5e0!3m2!1sen!2sus!4v1732233471451!5m2!1sen!2sus"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="rounded-lg"
-                  ></iframe>
+              {/* Map and Address Cards */}
+              <div className="space-y-6">
+                {/* Muaither Office */}
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300 border border-[#00204A]/10">
+                  <div className="aspect-w-16 aspect-h-9">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14432.914085278253!2d51.415211!3d25.262897!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45d9609642333b%3A0xe1b2139c78662585!2sSalem%20Taleb%20Efaifa%20Auditing%20and%20consultancy!5e0!3m2!1sen!2sus!4v1732233471451!5m2!1sen!2sus"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="rounded-t-lg"
+                    ></iframe>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="p-3 bg-[#00204A]/5 rounded-lg flex-shrink-0">
+                        <HiLocationMarker className="w-6 h-6 text-[#00204A]" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-[#00204A] mb-2">Muaither Office</h3>
+                        <p className="text-[#00204A]/70 leading-relaxed">
+                          Office No. 4, Building No. 3,<br />
+                          Street No. 902, Zone No. 55,<br />
+                          Muaither Area, Qatar
+                        </p>
+                        <a 
+                          href="https://maps.app.goo.gl/zVLPxbrQbEnaJx4R7"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center mt-3 text-sm text-[#00204A]/80 hover:text-[#00204A] hover:underline"
+                        >
+                          View on Google Maps <HiExternalLink className="ml-1" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Umm Ghuwalina Office */}
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300 border border-[#00204A]/10">
+                  <div className="aspect-w-16 aspect-h-9">
+                    <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.6769879792673!2d51.54228617593193!3d25.281449228282085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c50060f6cb5f%3A0xefd74124f3bb15e2!2sSTE%20Auditing%20Services!5e0!3m2!1sen!2suk!4v1737905505800!5m2!1sen!2suk" 
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="rounded-t-lg"
+                    ></iframe>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="p-3 bg-[#00204A]/5 rounded-lg flex-shrink-0">
+                        <HiLocationMarker className="w-6 h-6 text-[#00204A]" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-[#00204A] mb-2">Umm Ghuwalina Office</h3>
+                        <p className="text-[#00204A]/70 leading-relaxed">
+                          Flat No. 2, Floor No. 1,<br />
+                          Street No. 220, Building No. 9,<br />
+                          Zone 27, Umm Ghuwalina, Qatar
+                        </p>
+                        <a 
+                          href="https://maps.app.goo.gl/Evu1fY4TYMzaqma5A"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center mt-3 text-sm text-[#00204A]/80 hover:text-[#00204A] hover:underline"
+                        >
+                          View on Google Maps <HiExternalLink className="ml-1" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -215,50 +280,6 @@ export default function Contact() {
                   <div className="flex justify-between items-center">
                     <span className="text-[#00204A]/70">Friday</span>
                     <span className="text-[#00204A]">Closed</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Address Card */}
-              <div className="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-1 transition-all duration-300 border border-[#00204A]/10">
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-[#00204A]/5 rounded-lg">
-                    <HiLocationMarker className="w-6 h-6 text-[#00204A]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-[#00204A] mb-1">Address</h3>
-                    <div className="space-y-4">
-                      <div>
-                        <p className="text-[#00204A]/70 leading-relaxed">
-                          Office No. 4, Building No. 3,<br />
-                          Street No. 902, Zone No. 55,<br />
-                          Muaither Area, Qatar
-                        </p>
-                        <a 
-                          href="https://maps.app.goo.gl/zVLPxbrQbEnaJx4R7"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center mt-2 text-sm text-[#00204A]/80 hover:text-[#00204A] hover:underline"
-                        >
-                          View on Google Maps <HiExternalLink className="ml-1" />
-                        </a>
-                      </div>
-                      <div>
-                        <p className="text-[#00204A]/70 leading-relaxed">
-                          Flat No. 2, Floor No. 1,<br />
-                          Street No. 220, Building No. 9,<br />
-                          Zone 27, Umm Ghuwalina, Qatar
-                        </p>
-                        <a 
-                          href="https://maps.app.goo.gl/Evu1fY4TYMzaqma5A"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center mt-2 text-sm text-[#00204A]/80 hover:text-[#00204A] hover:underline"
-                        >
-                          View on Google Maps <HiExternalLink className="ml-1" />
-                        </a>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
