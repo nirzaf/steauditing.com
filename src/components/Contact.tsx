@@ -70,6 +70,38 @@ export default function Contact() {
           <div className="h-px w-32 mx-auto bg-gradient-to-r from-transparent via-[#00204A]/20 to-transparent"></div>
         </div>
 
+        {/* Business Hours Card - Full Width */}
+        <div className="mb-12">
+          <div className="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-1 transition-all duration-300 border border-[#00204A]/10">
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-2xl font-semibold text-[#00204A] mb-6 text-center">Business Hours</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-[#00204A]/5 rounded-lg p-6">
+                  <div className="text-center">
+                    <h4 className="font-medium text-[#00204A] mb-3">Weekdays</h4>
+                    <p className="text-[#00204A]/70">Sunday - Thursday</p>
+                    <p className="text-[#00204A] font-medium">8:00 AM - 6:00 PM</p>
+                  </div>
+                </div>
+                <div className="bg-[#00204A]/5 rounded-lg p-6">
+                  <div className="text-center">
+                    <h4 className="font-medium text-[#00204A] mb-3">Saturday</h4>
+                    <p className="text-[#00204A]/70">Weekend</p>
+                    <p className="text-[#00204A] font-medium">9:00 AM - 3:00 PM</p>
+                  </div>
+                </div>
+                <div className="bg-[#00204A]/5 rounded-lg p-6">
+                  <div className="text-center">
+                    <h4 className="font-medium text-[#00204A] mb-3">Friday</h4>
+                    <p className="text-[#00204A]/70">Weekend</p>
+                    <p className="text-[#00204A] font-medium">Closed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column - Contact Cards */}
           <div className="lg:col-span-2">
@@ -181,7 +213,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right Column - Map, Business Hours, and Address */}
+          {/* Right Column - Map and Address */}
           <div className="lg:col-span-1">
             <div className="space-y-6">
               {/* Map and Address Cards */}
@@ -261,25 +293,6 @@ export default function Contact() {
                         </a>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Business Hours Card */}
-              <div className="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-1 transition-all duration-300 border border-[#00204A]/10">
-                <h3 className="text-xl font-semibold text-[#00204A] mb-4">Business Hours</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-[#00204A]/70">Sunday - Thursday</span>
-                    <span className="text-[#00204A] font-medium">8:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-[#00204A]/70">Saturday</span>
-                    <span className="text-[#00204A] font-medium">9:00 AM - 3:00 PM</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-[#00204A]/70">Friday</span>
-                    <span className="text-[#00204A]">Closed</span>
                   </div>
                 </div>
               </div>
