@@ -227,19 +227,38 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-[#00204A] mb-1">Address</h3>
-                    <p className="text-[#00204A]/70 leading-relaxed">
-                      Office No. 4, Building No. 3,<br />
-                      Street No. 902, Zone No. 55,<br />
-                      Muaither Area, Qatar
-                    </p>
-                    <a 
-                      href="https://maps.app.goo.gl/zVLPxbrQbEnaJx4R7"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center mt-2 text-sm text-[#00204A]/80 hover:text-[#00204A] hover:underline"
-                    >
-                      View on Google Maps <HiExternalLink className="ml-1" />
-                    </a>
+                    <div className="space-y-4">
+                      <div>
+                        <p className="text-[#00204A]/70 leading-relaxed">
+                          Office No. 4, Building No. 3,<br />
+                          Street No. 902, Zone No. 55,<br />
+                          Muaither Area, Qatar
+                        </p>
+                        <a 
+                          href="https://maps.app.goo.gl/zVLPxbrQbEnaJx4R7"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center mt-2 text-sm text-[#00204A]/80 hover:text-[#00204A] hover:underline"
+                        >
+                          View on Google Maps <HiExternalLink className="ml-1" />
+                        </a>
+                      </div>
+                      <div>
+                        <p className="text-[#00204A]/70 leading-relaxed">
+                          Flat No. 2, Floor No. 1,<br />
+                          Street No. 220, Building No. 9,<br />
+                          Zone 27, Umm Ghuwalina, Qatar
+                        </p>
+                        <a 
+                          href="https://maps.app.goo.gl/Evu1fY4TYMzaqma5A"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center mt-2 text-sm text-[#00204A]/80 hover:text-[#00204A] hover:underline"
+                        >
+                          View on Google Maps <HiExternalLink className="ml-1" />
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
