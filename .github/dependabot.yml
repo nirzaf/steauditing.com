@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: "npm" # For JavaScript/Node.js projects
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Auto-merge configuration
+    automerge: true
+    # Optional: only auto-merge minor and patch updates
+    versioning-strategy: auto
+    allow:
+      - dependency-type: "direct"
+        update-type: "semver:minor"
+      - dependency-type: "direct"
+        update-type: "semver:patch"
