@@ -1,15 +1,16 @@
 version: 2
 updates:
-  - package-ecosystem: "npm" # For JavaScript/Node.js projects
+  - package-ecosystem: "npm"  # For JavaScript/Node.js projects
     directory: "/"
     schedule:
       interval: "weekly"
-    # Auto-merge configuration
-    automerge: true
-    # Optional: only auto-merge minor and patch updates
+    # Correct auto-merge configuration
+    open-pull-requests-limit: 10
+    # Target specific version updates
     versioning-strategy: auto
-    allow:
-      - dependency-type: "direct"
-        update-type: "semver:minor"
-      - dependency-type: "direct"
-        update-type: "semver:patch"
+    # Configure the PR
+    pull-request-branch-name:
+      separator: "-"
+    commit-message:
+      prefix: "npm"
+      include: "scope"
