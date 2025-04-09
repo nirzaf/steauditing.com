@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import NumberStorm from './NumberStorm';
 
 export default function Hero() {
   return (
@@ -16,6 +17,9 @@ export default function Hero() {
           className="w-full h-full object-cover brightness-75"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80"></div>
+        
+        {/* Number Storm Animation */}
+        <NumberStorm />
         
         {/* Subtle Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-purple-900/20"></div>
