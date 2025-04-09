@@ -35,7 +35,7 @@ export default function NumberStorm() {
     // Create initial particles
     const createParticles = () => {
       const newParticles: NumberParticle[] = [];
-      const count = 50; // Number of particles
+      const count = 75; // Increased number of particles for better visibility
       
       for (let i = 0; i < count; i++) {
         newParticles.push({
@@ -43,7 +43,7 @@ export default function NumberStorm() {
           x: Math.random() * 100, // Random starting position (%)
           y: Math.random() * 100,
           size: Math.random() * 1.5 + 0.8, // Random size between 0.8 and 2.3rem
-          opacity: Math.random() * 0.5 + 0.1, // Random opacity between 0.1 and 0.6
+          opacity: Math.random() * 0.4 + 0.3, // Random opacity between 0.3 and 0.7
           value: generateValue(),
           duration: Math.random() * 20 + 15, // Random duration between 15 and 35 seconds
           delay: Math.random() * 10 // Random delay for staggered animation
@@ -68,7 +68,7 @@ export default function NumberStorm() {
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute font-mono text-blue-300/50 font-semibold"
+          className="absolute font-mono text-blue-300/70 font-semibold"
           initial={{
             x: `${particle.x}vw`,
             y: `${particle.y}vh`,
@@ -90,7 +90,7 @@ export default function NumberStorm() {
               `${(particle.y + 60) % 100}vh`,
               `${(particle.y + 80) % 100}vh`
             ],
-            opacity: [0, particle.opacity, particle.opacity, particle.opacity, 0],
+            opacity: [0, particle.opacity, particle.opacity * 1.2, particle.opacity, 0],
             scale: [0, particle.size, particle.size, particle.size, 0],
             rotate: [0, 45, 90, 180, 360]
           }}
@@ -103,7 +103,7 @@ export default function NumberStorm() {
           }}
           style={{
             fontSize: `${particle.size}rem`,
-            textShadow: '0 0 10px rgba(59, 130, 246, 0.5)'
+            textShadow: '0 0 12px rgba(59, 130, 246, 0.7), 0 0 20px rgba(59, 130, 246, 0.5)'
           }}
         >
           {particle.value}
