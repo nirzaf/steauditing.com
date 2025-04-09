@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhyChooseUs from './components/WhyChooseUs';
 import Services from './components/Services';
+import ServicesShowcase from './components/ServicesShowcase';
 import About from './components/About';
 import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
@@ -21,6 +22,7 @@ function HomePage() {
       <WhyChooseUs />
       <PrimeGlobal />
       <Performance />
+      <ServicesShowcase />
       <Services />
       <MissionVision />
       <About />
