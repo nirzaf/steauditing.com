@@ -1,16 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  @apply antialiased text-gray-900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--tw-gray-900);
 }
 
 /* Custom styles for form elements */
 input, textarea {
-  @apply border-gray-300 focus:ring-blue-500 focus:border-blue-500;
+  border-color: var(--tw-gray-300);
+}
+
+input:focus, textarea:focus {
+  --tw-ring-color: var(--tw-blue-500);
+  border-color: var(--tw-blue-500);
 }
