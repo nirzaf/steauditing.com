@@ -1,5 +1,6 @@
 import HeroSection from '../components/partners/HeroSection';
 import PartnersSection from '../components/partners/PartnersSection';
+import SEO from '../components/SEO';
 
 const partners = [
   {
@@ -30,6 +31,7 @@ const partners = [
 export default function PartnersPage() {
   return (
     <div className="pt-20">
+      <SEO page="partners" />
       <HeroSection />
       <PartnersSection partners={partners} />
     </div>

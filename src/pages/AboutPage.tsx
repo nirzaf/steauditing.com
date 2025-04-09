@@ -5,10 +5,12 @@ import WhyChooseUs from '../components/about/WhyChooseUs';
 import Benefits from '../components/about/Benefits';
 import MissionVision from '../components/about/MissionVision';
 import CoreValues from '../components/about/CoreValues';
+import SEO from '../components/SEO';
 
 export default function AboutPage() {
   return (
     <div className="pt-20">
+      <SEO page="about" />
       <HeroSection />
       <OurStory />
       <QuoteSection />
